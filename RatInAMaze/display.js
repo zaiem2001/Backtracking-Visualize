@@ -27,14 +27,6 @@ export const updateStackDisplay = (stack) => {
     stackItemEle.innerHTML = `dfs(${stackItem.row}, ${stackItem.col}, "${stackItem.path}")`;
     stackItemEle.classList.add("stackItem");
     stackDiv.appendChild(stackItemEle);
-
-    if (indx === stack.length - 1) {
-      stackItemEle.classList.add("active");
-    }
-
-    if (indx === 0) {
-      stackItemEle.classList.add("bottom");
-    }
   });
 };
 

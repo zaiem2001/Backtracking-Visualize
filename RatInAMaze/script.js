@@ -22,10 +22,7 @@ let MAZE = generateRandomMaze(5);
 // inpur for delay range button type
 delayBtn.addEventListener("change", (e) => {
   const value = parseInt(e.target.value) || 0;
-  console.log({ value });
-
   delayValueElem.innerHTML = value + "ms";
-
   setDelay(value);
 });
 
@@ -42,7 +39,6 @@ solveBtn.addEventListener("click", () => {
   solveBtn.disabled = true;
   resetMazeBtn.disabled = true;
   noPathEle.innerHTML = "";
-
   solveBtn.innerHTML = "Solving...";
 
   solveMaze(MAZE).then(() => {
