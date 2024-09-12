@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rat in a Maze</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="inputContainer">
+      <h1 class="title">Rat in a Maze</h1>
+      <div class="input">
+        <button id="solve">Solve</button>
+        <button id="reset">Reset Maze</button>
+      </div>
+
+      <div class="delayContainer">
+        <label for="delay">Delay</label>
+        <input type="range" id="delay" min="0" max="1000" value="0" />
+        <span id="delayValue">0ms</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="messageContainer">
+        <h3 class="message"></h3>
+        <div class="paths"></div>
+        <h3 class="no_path"></h3>
+      </div>
+
+      <div id="maze"></div>
+
+      <div id="stackContainer">
+        <h3>Call Stack:</h3>
+        <div class="stack">
+          <div class="stackItem">dfs(0,0,Right)</div>
+
+          <div class="stackItem">
+            <div class="stackItemValue">dfs(0,0,path)</div>
+            <div class="stackItemDirection">Right</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
